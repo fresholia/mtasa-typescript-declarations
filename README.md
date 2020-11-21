@@ -1,3 +1,3 @@
 # mta-typescript-sdk
  
-https://github.com/TypeScriptToLua/TypeScriptToLua
+https://github.com/projectlua/mta-typescript-sdk
