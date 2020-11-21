@@ -352,7 +352,7 @@ declare module "mta" {
 
     export function getRadarAreaSize(theRadararea: RadarArea): [number, number]
 
-    export function isInsideRadarArea(theRadararea : RadarArea, posX: number, posY: number): boolean
+    export function isInsideRadarArea(theRadararea: RadarArea, posX: number, posY: number): boolean
 
     export function isRadarAreaFlashing(theRadararea: RadarArea): boolean
 
