@@ -75,6 +75,8 @@ declare namespace table {
     export function remove(table: object, index: number): number;
 }
 
+declare function Vector2(x: number, y: number): boolean
+
 declare module "mta" {
     export const enum Locales {
         Arabic = "ar",
@@ -350,7 +352,7 @@ declare module "mta" {
 
     export function getRadarAreaSize(theRadararea: RadarArea): [number, number]
 
-    export function isInsideRadarArea(theArea, posX: number, posY: number): boolean
+    export function isInsideRadarArea(theRadararea : RadarArea, posX: number, posY: number): boolean
 
     export function isRadarAreaFlashing(theRadararea: RadarArea): boolean
 
