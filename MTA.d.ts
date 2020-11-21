@@ -71,8 +71,8 @@ declare const sourceResource: element;
 declare const sourceTimer: element;
 
 declare namespace table {
-    export function insert(table: object, item: any): number;
-    export function remove(table: object, index: number): number;
+    export function insert(this: void, table: object, item: any): number;
+    export function remove(this: void, table: object, index: number): number;
 }
 
 declare function Vector2(x: number, y: number): boolean
@@ -113,75 +113,75 @@ declare module "mta" {
         ChineseTraditional = "zh_tw"
     }
 
-    export function addCommandHandler(commandName: string, handlerFunction: Function, restricted?: false, caseSensitive?: true): boolean
+    export function addCommandHandler(this: void, commandName: string, handlerFunction: Function, restricted?: false, caseSensitive?: true): boolean
 
-    export function addCommandHandler(commandName: string, handlerFunction: Function, caseSensitive?: true): boolean
+    export function addCommandHandler(this: void, commandName: string, handlerFunction: Function, caseSensitive?: true): boolean
     
-    export function outputChatBox(text: string, visibleTo?: element, r?: 231, g?: 217, b?: 176, colorCoded?: false): boolean
+    export function outputChatBox(this: void, text: string, visibleTo?: element, r?: 231, g?: 217, b?: 176, colorCoded?: false): boolean
     
-    export function outputChatBox(text: string, r?: 231, g?: 217, b?: 176, colorCoded?: false): boolean
+    export function outputChatBox(this: void, text: string, r?: 231, g?: 217, b?: 176, colorCoded?: false): boolean
 
-    export function addEvent(eventName: string, allowRemoteTrigger?: false): boolean
+    export function addEvent(this: void, eventName: string, allowRemoteTrigger?: false): boolean
 
-    export function addEventHandler(eventName: string, attachedTo: element, handlerFunction: Function, getPropagated?: true, priority?: "normal"): boolean
+    export function addEventHandler(this: void, eventName: string, attachedTo: element, handlerFunction: Function, getPropagated?: true, priority?: "normal"): boolean
 
-    export function getEventHandlers(eventName: string, attachedTo: element): table
+    export function getEventHandlers(this: void, eventName: string, attachedTo: element): table
 
-    export function cancelEvent(cancel?: true, reason?: ""): boolean
+    export function cancelEvent(this: void, cancel?: true, reason?: ""): boolean
 
-    export function cancelEvent(): boolean
+    export function cancelEvent(this: void): boolean
 
-    export function getCancelReason(): string
+    export function getCancelReason(this: void): string
 
-    export function removeEventHandler(eventName: string, attachedTo: element, functionVar: Function): boolean
+    export function removeEventHandler(this: void, eventName: string, attachedTo: element, functionVar: Function): boolean
 
-    export function triggerClientEvent(sendTo: element, name: string, sourceElement: element, ...args: any[]): boolean
-    export function triggerClientEvent(sendTo: table, name: string, sourceElement: element, ...args: any[]): boolean
-    export function triggerClientEvent(name: string, sourceElement: element, ...args: any[]): boolean
+    export function triggerClientEvent(this: void, sendTo: element, name: string, sourceElement: element, ...args: any[]): boolean
+    export function triggerClientEvent(this: void, sendTo: table, name: string, sourceElement: element, ...args: any[]): boolean
+    export function triggerClientEvent(this: void, name: string, sourceElement: element, ...args: any[]): boolean
 
-    export function triggerServerEvent(name: string, sourceElement: element, ...args: any[]): boolean
+    export function triggerServerEvent(this: void, name: string, sourceElement: element, ...args: any[]): boolean
 
-    export function triggerEvent(eventName: string, baseElement: element, ...args: any[]): boolean
+    export function triggerEvent(this: void, eventName: string, baseElement: element, ...args: any[]): boolean
 
-    export function wasEventCancelled(): boolean
+    export function wasEventCancelled(this: void): boolean
 
-    export function triggerLatentClientEvent(sendTo: element, name: string, bandwidth?: 50000, persist?: false, theElement?: element, ...args: any[]): boolean
-    export function triggerLatentClientEvent(sendTo: table, name: string, bandwidth?: 50000, persist?: false, theElement?: element, ...args: any[]): boolean
-    export function triggerLatentClientEvent(name: string, bandwidth?: 50000, persist?: false, theElement?: element, ...args: any[]): boolean
+    export function triggerLatentClientEvent(this: void, sendTo: element, name: string, bandwidth?: 50000, persist?: false, theElement?: element, ...args: any[]): boolean
+    export function triggerLatentClientEvent(this: void, sendTo: table, name: string, bandwidth?: 50000, persist?: false, theElement?: element, ...args: any[]): boolean
+    export function triggerLatentClientEvent(this: void, name: string, bandwidth?: 50000, persist?: false, theElement?: element, ...args: any[]): boolean
 
-    export function getLatentEventHandles(thePlayer: Player): table
+    export function getLatentEventHandles(this: void, thePlayer: Player): table
 
-    export function getLatentEventHandles(): table
+    export function getLatentEventHandles(this: void): table
 
-    export function getLatentEventStatus(thePlayer: Player, handle: number): table
+    export function getLatentEventStatus(this: void, thePlayer: Player, handle: number): table
 
-    export function getLatentEventStatus(handle: number): table
+    export function getLatentEventStatus(this: void, handle: number): table
 
-    export function cancelLatentEvent(thePlayer: Player, handle: number): boolean
+    export function cancelLatentEvent(this: void, thePlayer: Player, handle: number): boolean
 
-    export function cancelLatentEvent(handle: number): boolean
+    export function cancelLatentEvent(this: void, handle: number): boolean
 
-    export function createBlip(x: number, y: number, z: number, icon?: 0, size?: 2, r?: 255, g?: 0, b?: 0, a?: 255, ordering?: 0, visibleDistance?: 99999.0, visibleTo?: element): Blip
+    export function createBlip(this: void, x: number, y: number, z: number, icon?: 0, size?: 2, r?: 255, g?: 0, b?: 0, a?: 255, ordering?: 0, visibleDistance?: 99999.0, visibleTo?: element): Blip
 
-    export function createBlipAttachedTo(elementToAttachTo: element, icon?: 0, size?: 2, r?: 255, g?: 0, b?: 0, a?: 255, ordering?: 0, visibleDistance?: 99999.0, visibleTo?: element): Blip
+    export function createBlipAttachedTo(this: void, elementToAttachTo: element, icon?: 0, size?: 2, r?: 255, g?: 0, b?: 0, a?: 255, ordering?: 0, visibleDistance?: 99999.0, visibleTo?: element): Blip
 
-    export function getBlipColor(theBlip: Blip): [number, number, number, number]
+    export function getBlipColor(this: void, theBlip: Blip): [number, number, number, number]
 
-    export function getBlipIcon(theBlip: Blip): number
+    export function getBlipIcon(this: void, theBlip: Blip): number
 
-    export function getBlipSize(theBlip: Blip): number
+    export function getBlipSize(this: void, theBlip: Blip): number
 
-    export function setBlipColor(theBlip: Blip, red: number, green: number, blue: number, alpha: number): boolean
+    export function setBlipColor(this: void, theBlip: Blip, red: number, green: number, blue: number, alpha: number): boolean
 
-    export function setBlipIcon(theBlip: Blip, icon: number): boolean
+    export function setBlipIcon(this: void, theBlip: Blip, icon: number): boolean
 
-    export function setBlipSize(theBlip: Blip, iconSize: number): boolean
+    export function setBlipSize(this: void, theBlip: Blip, iconSize: number): boolean
 
-    export function getBlipOrdering(theBlip: Blip): number
+    export function getBlipOrdering(this: void, theBlip: Blip): number
 
-    export function setBlipOrdering(theBlip: Blip, ordering: number): boolean
+    export function setBlipOrdering(this: void, theBlip: Blip, ordering: number): boolean
 
-    export function getBlipVisibleDistance(theBlip: Blip): number
+    export function getBlipVisibleDistance(this: void, theBlip: Blip): number
 
     export function setBlipVisibleDistance(theBlip: Blip, theDistance: number): boolean
  
