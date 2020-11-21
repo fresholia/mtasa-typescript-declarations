@@ -75,7 +75,42 @@ declare namespace table {
     export function remove(table: object, index: number): number;
 }
 
-declare namespace mta {
+declare module "mta" {
+    export const enum Locales {
+        Arabic = "ar",
+        Belarusian = "by",
+        Czech = "cz",
+        German = "de",
+        English = "en",
+        Spanish = "es",
+        Farsi = "fa",
+        French = "fr",
+        Hebrew = "he",
+        Hungarian = "hu",
+        Indonesian = "id",
+        Hindi = "hi_in",
+        Malayalam = "ml_in",
+        Telugu = "te_in",
+        Tamil = "ta_in",
+        Italian = "it",
+        Lithuanian = "lt",
+        Latvian = "lv",
+        NorwegianBokmal = "nb_no",
+        NorwegianNynorsk = "nn_no",
+        Polish = "pl",
+        Portugese = "pt",
+        BrazilianPortuguese = "pt_br",
+        Romanian = "ro",
+        Serbian = "sr",
+        Russian = "ru",
+        Slovak = "sk",
+        Thai = "th",
+        Turkish = "tr",
+        Ukrainian = "uk",
+        ChineseSimplified = "zh_cn",
+        ChineseTraditional = "zh_tw"
+    }
+
     export function addCommandHandler(commandName: string, handlerFunction: Function, restricted?: false, caseSensitive?: true): boolean
 
     export function addCommandHandler(commandName: string, handlerFunction: Function, caseSensitive?: true): boolean
@@ -686,6 +721,8 @@ declare namespace mta {
     export function dxDrawRectangle(startX: number, startY: number, width: number, height: number, color?: Color, postGUI?: false, subPixelPositioning?: boolean): boolean;
 
     export function dxDrawText(text: string, left: number, top: number, right?: 0, bottom?: 0, color?: 0, scale?: 1, font?: Font, alignX?: "left", alignY?: "top", clip?: false, wordBreak?: false, postGUI?: false, colorCoded?: false, subPixelPositioning?: false, fRotation?: 0, fRotationCenterX?: 0, fRotationCenterY?: 0): boolean;
+
+    export function showCursor(state: boolean): void;
 
     export function dxGetFontHeight(scale?: 1, font?: Font): number
 
