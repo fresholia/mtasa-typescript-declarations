@@ -183,49 +183,49 @@ declare module "mta" {
 
     export function getBlipVisibleDistance(this: void, theBlip: Blip): number
 
-    export function setBlipVisibleDistance(theBlip: Blip, theDistance: number): boolean
+    export function setBlipVisibleDistance(this: void, theBlip: Blip, theDistance: number): boolean
  
-    export function createColCircle(fX: number, fY: number, radius: number): Colshape
+    export function createColCircle(this: void, fX: number, fY: number, radius: number): Colshape
 
-    export function createColCuboid(fX: number, fY: number, fZ: number, fWidth: number, fDepth: number, fHeight: number): Colshape
+    export function createColCuboid(this: void, fX: number, fY: number, fZ: number, fWidth: number, fDepth: number, fHeight: number): Colshape
 
-    export function createColRectangle(fX: number, fY: number, fWidth: number, fHeight: number): Colshape
+    export function createColRectangle(this: void, fX: number, fY: number, fWidth: number, fHeight: number): Colshape
 
-    export function createColSphere(fX: number, fY: number, fZ: number, fRadius: number): Colshape
+    export function createColSphere(this: void, fX: number, fY: number, fZ: number, fRadius: number): Colshape
 
-    export function createColTube(fX: number, fY: number, fZ: number, fRadius: number, fHeight: number): Colshape
+    export function createColTube(this: void, fX: number, fY: number, fZ: number, fRadius: number, fHeight: number): Colshape
 
-    export function createColPolygon(fX: number, fY: number, fX1: number, fY1: number, fX2: number, fY2: number, ...args: number[]): Colshape
+    export function createColPolygon(this: void, fX: number, fY: number, fX1: number, fY1: number, fX2: number, fY2: number, ...args: number[]): Colshape
 
-    export function createMarker(x: number, y: number, z: number, theType?: "checkponumber", size?: 4.0, r?: 0, g?: 0, b?: 255, a?: 255, visibleTo?: element): Marker
+    export function createMarker(this: void, x: number, y: number, z: number, theType?: "checkponumber", size?: 4.0, r?: 0, g?: 0, b?: 255, a?: 255, visibleTo?: element): Marker
 
-    export function getMarkerColor(theMarker: Marker): [number, number, number, number]
+    export function getMarkerColor(this: void, theMarker: Marker): [number, number, number, number]
 
-    export function getMarkerCount(): number
+    export function getMarkerCount(this: void): number
 
-    export function getMarkerIcon(theMarker: Marker): string
+    export function getMarkerIcon(this: void, theMarker: Marker): string
 
-    export function getMarkerSize(theMarker: Marker): number
+    export function getMarkerSize(this: void, theMarker: Marker): number
 
-    export function getMarkerTarget(theMarker: Marker): [number, number, number]
+    export function getMarkerTarget(this: void, theMarker: Marker): [number, number, number]
 
-    export function getMarkerType(theMarker: Marker): string
+    export function getMarkerType(this: void, theMarker: Marker): string
 
-    export function setMarkerColor(theMarker: Marker, r: number, g: number, b: number, a: number): boolean
+    export function setMarkerColor(this: void, theMarker: Marker, r: number, g: number, b: number, a: number): boolean
 
-    export function setMarkerIcon(theMarker: Marker, icon: string): boolean
+    export function setMarkerIcon(this: void, theMarker: Marker, icon: string): boolean
 
-    export function setMarkerSize(theMarker: Marker, size: number): boolean
+    export function setMarkerSize(this: void, theMarker: Marker, size: number): boolean
 
-    export function setMarkerTarget(theMarker: Marker, x: number, y: number, z: number): boolean
+    export function setMarkerTarget(this: void, theMarker: Marker, x: number, y: number, z: number): boolean
 
-    export function setMarkerType(theMarker: Marker, markerType: string): boolean
+    export function setMarkerType(this: void, theMarker: Marker, markerType: string): boolean
 
-    export function createObject(modelid: number, x: number, y: number, z: number, rx?: number, ry?: number, rz?: number, isLowLOD?: false): _Object
+    export function createObject(this: void, modelid: number, x: number, y: number, z: number, rx?: number, ry?: number, rz?: number, isLowLOD?: false): _Object
 
-    export function moveObject(theObject: _Object, time: number, targetx: number, targety: number, targetz: number, moverx?: number, movery?: number, moverz?: number, strEasingType?: string, fEasingPeriod?: number, fEasingAmplitude?: number, fEasingOvershoot?: number): boolean
+    export function moveObject(this: void, theObject: _Object, time: number, targetx: number, targety: number, targetz: number, moverx?: number, movery?: number, moverz?: number, strEasingType?: string, fEasingPeriod?: number, fEasingAmplitude?: number, fEasingOvershoot?: number): boolean
 
-    export function stopObject(theobject: _Object): boolean
+    export function stopObject(this: void, theobject: _Object): boolean
 
     export function getObjectScale(theObject: _Object): number
 
